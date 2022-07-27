@@ -28,7 +28,7 @@ var shop_cartController = {
     );
   },
 
-  updateCart: async (req, res) => {
+  updateCart: (req, res) => {
     if (req.body.name == '客製化T恤') {
       db.exec(
         'SELECT * FROM `custompic` order by id DESC LIMIT 1',
@@ -56,9 +56,9 @@ var shop_cartController = {
             quantity: quantity,
           };
 
+          // shop_cartModel.addToCart(cart, req, all_id, quantity, product);
           if (req.session.cart) {
-            // console.log(req.session.cart);
-            cart = req.session.cart;
+            var cart = req.session.cart;
             if (shop_cartModel.isProductInCart(cart, all_id)) {
               for (let i = 0; i < cart.length; i++) {
                 let ct = 0;
@@ -70,22 +70,21 @@ var shop_cartController = {
               }
             } else {
               cart.push(product);
+              // console.log('我在這');
               // req.session.cart = cart;
               // console.log(req.session);
               // console.log('結束');
             }
           } else {
-            // console.log('A');
             req.session.cart = [product];
             var cart = req.session.cart;
           }
-
           //計算總數量
           shop_cartModel.updateCartCount(cart, req);
           // 計算總額
           shop_cartModel.calculateTotal(cart, req);
 
-          //return to cart page
+          // return to cart page
 
           res.redirect('back');
         }
@@ -117,8 +116,8 @@ var shop_cartController = {
 
       if (req.session.cart) {
         var cart = req.session.cart;
-        // console.log('CART =');
-        // console.log(cart);
+        console.log('CART =');
+        console.log(cart);
         if (shop_cartModel.isProductInCart(cart, all_id)) {
           for (let i = 0; i < cart.length; i++) {
             let ct = 0;
@@ -134,7 +133,7 @@ var shop_cartController = {
           // console.log('else cart ------------>');
           // console.log(cart);
 
-          // console.log('我在這');
+          console.log('我在這');
 
           cart.push(product);
           // console.log(cart);
@@ -154,7 +153,7 @@ var shop_cartController = {
       res.redirect('back');
     }
 
-    // console.log(req.session.cart) ;
+    // console.log(req.session.cart);
   },
 
   productAdd: (req, res) => {
@@ -192,21 +191,26 @@ var shop_cartController = {
 
       shop_cartModel.updateCartCount(cart, req);
       shop_cartModel.calculateTotal(cart, req);
-      console.log(req.session.cartCount);
-      console.log(req.session.total);
+      // console.log(req.session.cartCount);
+      // console.log(req.session.total);
       res.redirect('back');
     }
   },
   productDel: (req, res) => {
-    // console.log(req.session);
     if (req.session.cart) {
       var cart = req.session.cart;
       var del_id = req.body.allId;
 
+      // console.log(cart);
       if (shop_cartModel.isProductInCart(cart, del_id)) {
         for (let i = 0; i < cart.length; i++) {
           if (cart[i].all_id == del_id) {
-            cart.splice(i, 1);
+            console.log('aaaaa');
+            console.log(cart);
+
+            console.log(i);
+            console.log(cart.splice(i, i + 1));
+            cart.splice(i, i + 1);
             req.session.cart = cart;
             console.log('已刪除all_id:' + del_id + ' 商品');
           } else {
