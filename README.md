@@ -9,6 +9,7 @@
 讓function pop 帶給每個人獨特的顧客購物旅程。
 
 
+<img src="https://github.com/aliee0806/function.pop/blob/main/gitimg/logo-04.png" width="400" />
 ![svg](https://github.com/aliee0806/function.pop/blob/main/n8d0q-bo6fk.gif)
 
 ### LOGO設計
