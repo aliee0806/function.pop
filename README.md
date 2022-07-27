@@ -8,10 +8,20 @@
 搭配經濟實惠的價格讓顧客買單，進而成為既大眾又能兼具多元消費體驗的時裝品牌，
 讓function pop 帶給每個人獨特的顧客購物旅程。
 
-
 <img src="https://github.com/aliee0806/function.pop/blob/main/gitimg/logo-04.png" width="400" />
-![svg](https://github.com/aliee0806/function.pop/blob/main/n8d0q-bo6fk.gif)
 
 ### LOGO設計
 
-<img src="https://github.com/aliee0806/function.pop/blob/main/logo%E8%8D%89%E5%9C%96-04.png" width="500" />
+<img src="https://github.com/aliee0806/function.pop/blob/main/gitimg/logo%E8%8D%89%E5%9C%96-04.png" width="600" />
+
+![gif](https://s21.aconvert.com/convert/p3r68-cdx67/m93lf-pbtyo.gif)
+
+## 功能介紹 :
+* 前台
+	* 會員註冊、會員登入登出
+	* 商品列表頁、商品瀏覽頁、商品追蹤
+  * 加入購物車、收藏商品、訂單資訊
+  * RWD響應式設計
+  * 客製化衣服
+  
+
