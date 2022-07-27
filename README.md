@@ -18,10 +18,37 @@
 
 ## 功能介紹 :
 * 前台
-	* 會員註冊、會員登入登出
-	* 商品列表頁、商品瀏覽頁、商品追蹤
+  * 會員註冊、會員登入登出
+  * 商品列表頁、商品瀏覽頁、商品追蹤
   * 加入購物車、收藏商品、訂單資訊
   * RWD響應式設計
   * 客製化衣服
   
 
+<img src="https://github.com/aliee0806/function.pop/blob/main/gitimg/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-07-27%20125023.jpg" width="700" />
+
+
+* 後台
+  * 管理會員資訊
+  * 商品CRUD
+  * 資料分析
+  * 訂單資訊管理
+  
+  
+ <img src="https://github.com/aliee0806/function.pop/blob/main/gitimg/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202022-07-27%20153022.jpg" width="700" />
+
+
+## 使用技術
+
+* 前端
+  * HTML
+  * CSS
+  * JavaScript
+  * Bootstrap
+  * Sass/Scss
+  * Ajax
+  * RESTful API
+* 後端
+  * Node.js
+  * Express
+  * MySQL
